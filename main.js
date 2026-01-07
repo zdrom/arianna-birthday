@@ -27,13 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
             "To experience the divine culture?",
             "To see 5,000 years of civilization...",
             "Reborn?",
+            "Through breathtaking dance...",
+            "And thunderous drums...",
+            "Across the ancient lands...",
+            "Before the era of communism.",
             "A performance that will...",
             "...touch your soul.",
+            "A once-in-a-lifetime journey.",
             "A gift from the Heavens.",
-            "For you, Arianna..."
+            "Direct from the world's premier...",
+            "Chinese dance company.",
+            "And now, Arianna...",
+            "The magic begins."
         ];
 
-        let delay = 1500;
+        let delay = 1800; // Slightly slower for more "drag"
         preGagMessages.forEach((msg, index) => {
             setTimeout(() => {
                 transitionText.style.opacity = 0;
@@ -62,15 +70,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const messages = [
             "Wait a second...",
             "Did you really think...",
-            "That I would take you to Dayton?",
-            "For your birthday?",
-            "In 2025?",
-            "...actually I just wanted to see your reaction.",
-            "Okay, for real now...",
+            "I'd actually take you to see Shen Yun?",
+            "In Dayton, Ohio?",
+            "...",
+            "Actually, I just wanted to see that look on your face.",
+            "Okay, for real now.",
+            "Take a deep breath.",
+            "Because we're leaving the divine culture behind...",
+            "And heading somewhere different.",
+            "Somewhere atmospheric.",
+            "Somewhere soulful.",
+            "Somewhere we can disappear.",
+            "Just for a little while.",
+            "Are you ready for your real gift?",
             "Happy Birthday, Arianna."
         ];
 
-        let delay = 1500;
+        let delay = 2000;
         messages.forEach((msg, index) => {
             setTimeout(() => {
                 transitionText.style.opacity = 0;
