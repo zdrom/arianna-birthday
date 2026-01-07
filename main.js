@@ -75,11 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const messages = [
             "Okay, for real now.",
             "Take a deep breath.",
-            "Because we're leaving the divine culture behind...",
-            "And heading somewhere different.",
-            "Somewhere atmospheric.",
-            "Somewhere soulful.",
-            "Somewhere we can disappear."
+            "We're heading north...",
+            "To a place of old world charm.",
+            "Where the streets are paved with cobblestone...",
+            "And the air fills with French.",
+            "Pack your bags, Arianna.",
+            "We're going on an adventure."
         ];
 
         let delay = 2000;
