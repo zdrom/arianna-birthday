@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startBtn.addEventListener('click', () => {
         // First transition to the pre-gag interstitials
-        switchPhase('intro', 'transition', 500);
+        switchPhase('intro', 'transition', 1000);
 
         const transitionText = document.getElementById('transition-text');
         const preGagMessages = [
@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "A once-in-a-lifetime journey.",
             "A gift from the Heavens.",
             "Direct from the world's premier...",
-            "Chinese dance company.",
-            "And now, Arianna...",
-            "The magic begins."
+            "Chinese dance company."
         ];
 
         let delay = 1800; // Slightly slower for more "drag"
@@ -71,26 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const continueLink = document.getElementById('continue-link');
     continueLink.addEventListener('click', (e) => {
         e.preventDefault();
-        switchPhase('confirmation', 'transition', 500);
+        switchPhase('confirmation', 'transition', 1000);
 
         const transitionText = document.getElementById('transition-text');
         const messages = [
-            "Wait a second...",
-            "Did you really think...",
-            "I'd actually take you to see Shen Yun?",
-            "In Dayton, Ohio?",
-            "...",
-            "Actually, I just wanted to see that look on your face.",
             "Okay, for real now.",
             "Take a deep breath.",
             "Because we're leaving the divine culture behind...",
             "And heading somewhere different.",
             "Somewhere atmospheric.",
             "Somewhere soulful.",
-            "Somewhere we can disappear.",
-            "Just for a little while.",
-            "Are you ready for your real gift?",
-            "Happy Birthday, Arianna."
+            "Somewhere we can disappear."
         ];
 
         let delay = 2000;
