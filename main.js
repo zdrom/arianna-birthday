@@ -17,7 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startBtn.addEventListener('click', () => {
-        switchPhase('intro', 'gag', 500);
+        // First transition to the pre-gag interstitials
+        switchPhase('intro', 'transition', 500);
+
+        const transitionText = document.getElementById('transition-text');
+        const preGagMessages = [
+            "You know...",
+            "Birthdays are special.",
+            "And for a special person like you...",
+            "I wanted to find something...",
+            "...iconic.",
+            "...world-class.",
+            "...breathtaking.",
+            "So, Arianna..."
+        ];
+
+        let delay = 1500;
+        preGagMessages.forEach((msg, index) => {
+            setTimeout(() => {
+                transitionText.style.opacity = 0;
+                setTimeout(() => {
+                    transitionText.textContent = msg;
+                    transitionText.style.opacity = 1;
+                }, 300);
+            }, delay * index);
+        });
+
+        setTimeout(() => {
+            switchPhase('transition', 'gag', 500);
+        }, delay * preGagMessages.length + 500);
     });
 
     gagBtn.addEventListener('click', () => {
