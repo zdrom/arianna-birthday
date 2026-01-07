@@ -24,6 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const transitionText = document.getElementById('transition-text');
         const preGagMessages = [
             "Are you ready...",
+            "To witness a location like no other?",
+            "A hidden gem...",
+            "Rich in vibrant history...",
+            "And sophisticated charm.",
+            "The jewel of the Midwest.",
+            "But that's not all.",
+            "We're going there...",
             "To experience the divine culture?",
             "To see 5,000 years of civilization...",
             "Reborn?",
