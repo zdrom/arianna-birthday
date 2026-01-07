@@ -1,0 +1,222 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --text-light: #f5f5f7;
+    --accent-purple: #9c88ff;
+    --accent-gold: #d4af37;
+    --gag-bg: #fff;
+    --gag-text: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+    /* Prevent scrolling during animations */
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Phase Transitions */
+.phase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.phase.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Intro Style */
+#intro .content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#intro .content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+button {
+    background: transparent;
+    border: 1px solid var(--text-light);
+    color: var(--text-light);
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: var(--text-light);
+    color: var(--bg-dark);
+}
+
+/* Gag Style */
+#gag {
+    background-color: #f0f0f0;
+    color: var(--gag-text);
+}
+
+.gag-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.gag-title {
+    color: #cc0000;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.gag-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.date {
+    font-weight: bold;
+    color: #cc0000;
+    margin-top: 10px;
+}
+
+#gag-btn {
+    border-color: #333;
+    color: #333;
+}
+
+#gag-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Real Gift Style */
+#real-gift {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0a 100%);
+}
+
+.gift-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('reveal.png') center/cover no-repeat;
+    opacity: 0.4;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+#real-gift h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.artist {
+    font-size: 2rem;
+    color: var(--accent-purple);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    opacity: 0.6;
+}
+
+.details {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background: var(--text-light);
+    margin: 30px auto;
+}
+
+.message {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#transition-text {
+    font-size: 2rem;
+    font-weight: 300;
+}

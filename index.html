@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Arianna!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Phase 1: Intro -->
+        <section id="intro" class="phase active">
+            <div class="content">
+                <h1 class="fade-in">Hi Arianna...</h1>
+                <p class="fade-in delay-1">Ready for your birthday surprise?</p>
+                <button id="start-btn" class="fade-in delay-2">Yes!</button>
+            </div>
+        </section>
+
+        <!-- Phase 2: The Gag (Dayton / Shen Yun) -->
+        <section id="gag" class="phase">
+            <div class="gag-content">
+                <h2 class="gag-title">Surprise! 🎁</h2>
+                <div class="gag-card">
+                    <img src="gag.png" alt="Shen Yun Dayton" class="gag-img">
+                    <h3>Shen Yun in Dayton, Ohio!</h3>
+                    <p>Experience 5,000 years of civilization reborn.</p>
+                    <p class="date">Coming this Spring...</p>
+                </div>
+                <button id="gag-btn">Wow... thanks?</button>
+            </div>
+        </section>
+
+        <!-- Phase 3: The Reveal Transition -->
+        <section id="transition" class="phase">
+            <div class="reveal-text">
+                <h2 id="transition-text">Wait a second...</h2>
+            </div>
+        </section>
+
+        <!-- Phase 4: The Real Gift (Montreal / Rhye) -->
+        <section id="real-gift" class="phase">
+            <div class="gift-bg"></div>
+            <div class="gift-content">
+                <div class="itinerary-card glass">
+                    <span class="label">BIRTHDAY GIFT</span>
+                    <h1>Montreal</h1>
+                    <h2 class="artist">Rhye</h2>
+                    <p class="details">March 26th, 2026</p>
+                    <div class="divider"></div>
+                    <p class="message">I love you. Let's go on an adventure.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
