@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('start-btn');
     const gagBtn = document.getElementById('gag-btn');
-    
+
     const phases = {
         intro: document.getElementById('intro'),
         gag: document.getElementById('gag'),
@@ -22,23 +22,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gagBtn.addEventListener('click', () => {
         switchPhase('gag', 'transition', 500);
-        
-        const transitionText = document.getElementById('transition-text');
-        
-        setTimeout(() => {
-            transitionText.textContent = "Just kidding...";
-        }, 1500);
 
-        setTimeout(() => {
-            transitionText.textContent = "I have something better.";
-        }, 3000);
+        const transitionText = document.getElementById('transition-text');
+        const messages = [
+            "Wait a second...",
+            "Did you really think...",
+            "That I would take you to Dayton?",
+            "For your birthday?",
+            "In 2025?",
+            "...actually I just wanted to see your reaction.",
+            "Okay, for real now...",
+            "Happy Birthday, Arianna."
+        ];
+
+        let delay = 1500;
+        messages.forEach((msg, index) => {
+            setTimeout(() => {
+                transitionText.style.opacity = 0;
+                setTimeout(() => {
+                    transitionText.textContent = msg;
+                    transitionText.style.opacity = 1;
+                }, 300);
+            }, delay * index);
+        });
 
         setTimeout(() => {
             switchPhase('transition', 'realGift', 500);
-            // Trigger haptic-like vibration if supported
             if (window.navigator.vibrate) {
                 window.navigator.vibrate([100, 50, 100]);
             }
-        }, 4500);
+        }, delay * messages.length + 1000);
     });
 });
