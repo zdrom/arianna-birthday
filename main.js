@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const transitionText = document.getElementById('transition-text');
         const preGagMessages = [
-            "You know...",
-            "Birthdays are special.",
-            "And for a special person like you...",
-            "I wanted to find something...",
-            "...iconic.",
-            "...world-class.",
-            "...breathtaking.",
-            "So, Arianna..."
+            "Are you ready...",
+            "To experience the divine culture?",
+            "To see 5,000 years of civilization...",
+            "Reborn?",
+            "A performance that will...",
+            "...touch your soul.",
+            "A gift from the Heavens.",
+            "For you, Arianna..."
         ];
 
         let delay = 1500;
