@@ -49,7 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     gagBtn.addEventListener('click', () => {
-        switchPhase('gag', 'transition', 500);
+        switchPhase('gag', 'confirmation', 500);
+    });
+
+    const continueLink = document.getElementById('continue-link');
+    continueLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchPhase('confirmation', 'transition', 500);
 
         const transitionText = document.getElementById('transition-text');
         const messages = [
