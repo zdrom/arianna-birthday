@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phases = {
         intro: document.getElementById('intro'),
         gag: document.getElementById('gag'),
+        confirmation: document.getElementById('confirmation'),
         transition: document.getElementById('transition'),
         realGift: document.getElementById('real-gift')
     };
